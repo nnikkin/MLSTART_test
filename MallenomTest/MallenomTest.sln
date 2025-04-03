@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35919.96
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MallenomTest", "MallenomTest.csproj", "{A1D4D6C7-EE90-45B5-856F-49D61B00137A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3E2D0618-B927-4A0A-A385-1C561AF7AA77} = {3E2D0618-B927-4A0A-A385-1C561AF7AA77}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServer", "..\WebServer\WebServer.csproj", "{3E2D0618-B927-4A0A-A385-1C561AF7AA77}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A1D4D6C7-EE90-45B5-856F-49D61B00137A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1D4D6C7-EE90-45B5-856F-49D61B00137A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1D4D6C7-EE90-45B5-856F-49D61B00137A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1D4D6C7-EE90-45B5-856F-49D61B00137A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E2D0618-B927-4A0A-A385-1C561AF7AA77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E2D0618-B927-4A0A-A385-1C561AF7AA77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E2D0618-B927-4A0A-A385-1C561AF7AA77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E2D0618-B927-4A0A-A385-1C561AF7AA77}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {892FBA0B-C2CF-48C7-9E0F-E6619DDC7FBA}
+	EndGlobalSection
+EndGlobal

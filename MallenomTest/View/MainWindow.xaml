@@ -1,0 +1,63 @@
+﻿<Window x:Class = "MallenomTest.MainWindow"
+        xmlns = "http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x = "http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d = "http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc = "http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local = "clr-namespace:MallenomTest"
+        xmlns:col = "clr-namespace:System.Collections;assembly=mscorlib" xmlns:viewmodel="clr-namespace:MallenomTest.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:MainViewModel}"
+        mc:Ignorable = "d"
+        Title = "Тестовое задание" Height = "450" Width = "800">
+   
+    <Window.Resources>
+        <Style TargetType="ListViewItem">
+            <Setter Property="Height" Value="50"/>
+        </Style>
+    </Window.Resources>
+    
+    <Grid ShowGridLines = "False">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width = "*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height = "*"/>
+            <RowDefinition Height = "0.1*"/>
+        </Grid.RowDefinitions>
+
+        <DataGrid Name="ImagesDataGrid" ItemsSource="{Binding Images}" SelectedItem="{Binding SelectedImage}" AutoGenerateColumns="False" Grid.Row="0" RowHeight="100">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Название" Binding="{Binding Path=Name}" Width="0.5*"/>
+                <DataGridTemplateColumn Header="Изображение" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding Path=ImageFile}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Name="button_Add" Grid.Column="0" Command="{Binding AddCommand}">
+                <Button.Content>
+                    <TextBlock>ДОБАВИТЬ</TextBlock>
+                </Button.Content>
+            </Button>
+            <Button Name="button_Edit" Grid.Column="1" Command="{Binding UpdateCommand}">
+                <Button.Content>
+                    <TextBlock>ИЗМЕНИТЬ</TextBlock>
+                </Button.Content>
+            </Button>
+            <Button Name="button_Del" Grid.Column="2" Command="{Binding DeleteCommand}">
+                <Button.Content>
+                    <TextBlock>УДАЛИТЬ</TextBlock>
+                </Button.Content>
+            </Button>
+        </Grid>
+    </Grid>
+</Window>
